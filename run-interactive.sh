@@ -1,3 +1,5 @@
 #!/bin/sh
-docker build -t simple-docker-rust .
-docker run -it -v $(pwd)/src:/src -w /src simple-docker-rust sh
+name="simple-docker-rust"
+
+docker build -t $name .
+docker run -it -v $(pwd)/src:/src -w /src $name sh

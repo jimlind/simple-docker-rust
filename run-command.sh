@@ -1,3 +1,5 @@
 #!/bin/sh
-docker build -t simple-docker-rust .
-docker run -t -w /src simple-docker-rust sh -c "rustc print.rs; ./print"
+name="simple-docker-rust"
+
+docker build -t $name .
+docker run -t -w /src $name sh -c "rustc print.rs; ./print"
